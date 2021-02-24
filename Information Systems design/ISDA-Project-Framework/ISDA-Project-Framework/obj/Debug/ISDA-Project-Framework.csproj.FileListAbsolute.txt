@@ -1,0 +1,36 @@
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.exe.config
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.exe
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.pdb
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csprojAssemblyReference.cache
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormMain.resources
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormSpecialty.resources
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.Properties.Resources.resources
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csproj.GenerateResource.cache
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csproj.CoreCompileInputs.cache
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.exe
+D:\UNWE\.4КУРС\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.pdb
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.exe.config
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.exe
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.pdb
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csprojAssemblyReference.cache
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormMain.resources
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormSpecialty.resources
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.Properties.Resources.resources
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csproj.GenerateResource.cache
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csproj.CoreCompileInputs.cache
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.exe
+D:\UNWE\UNWE\Инф с-ми\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.pdb
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.exe.config
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.exe
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.pdb
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csprojAssemblyReference.cache
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormMain.resources
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormSpecialty.resources
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormSubject.resources
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.Properties.Resources.resources
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csproj.GenerateResource.cache
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csproj.CoreCompileInputs.cache
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.exe
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.pdb
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormStudent.resources
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormGrade.resources
