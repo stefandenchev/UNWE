@@ -1,5 +1,5 @@
 ﻿
-namespace ISDA_Project_Framework
+namespace WindowsFormsAppISDA
 {
     partial class FormGrade
     {
@@ -29,92 +29,99 @@ namespace ISDA_Project_Framework
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelStu = new System.Windows.Forms.Label();
-            this.studentBox = new System.Windows.Forms.ComboBox();
-            this.Student_ID_label = new System.Windows.Forms.Label();
             this.numericUpDownFinalGrade = new System.Windows.Forms.NumericUpDown();
-            this.subjLabel = new System.Windows.Forms.Label();
-            this.subjectBox = new System.Windows.Forms.ComboBox();
+            this.comboBoxStudent = new System.Windows.Forms.ComboBox();
+            this.comboBoxSubject = new System.Windows.Forms.ComboBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFinalGrade)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelStu
-            // 
-            this.labelStu.AutoSize = true;
-            this.labelStu.Location = new System.Drawing.Point(11, 8);
-            this.labelStu.Name = "labelStu";
-            this.labelStu.Size = new System.Drawing.Size(44, 13);
-            this.labelStu.TabIndex = 25;
-            this.labelStu.Text = "Student";
-            // 
-            // studentBox
-            // 
-            this.studentBox.FormattingEnabled = true;
-            this.studentBox.Location = new System.Drawing.Point(11, 27);
-            this.studentBox.Name = "studentBox";
-            this.studentBox.Size = new System.Drawing.Size(121, 21);
-            this.studentBox.TabIndex = 24;
-            // 
-            // Student_ID_label
-            // 
-            this.Student_ID_label.AutoSize = true;
-            this.Student_ID_label.Location = new System.Drawing.Point(11, 111);
-            this.Student_ID_label.Name = "Student_ID_label";
-            this.Student_ID_label.Size = new System.Drawing.Size(59, 13);
-            this.Student_ID_label.TabIndex = 23;
-            this.Student_ID_label.Text = "Final grade";
-            // 
             // numericUpDownFinalGrade
             // 
-            this.numericUpDownFinalGrade.Location = new System.Drawing.Point(11, 127);
+            this.numericUpDownFinalGrade.Location = new System.Drawing.Point(49, 156);
             this.numericUpDownFinalGrade.Name = "numericUpDownFinalGrade";
-            this.numericUpDownFinalGrade.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownFinalGrade.TabIndex = 22;
+            this.numericUpDownFinalGrade.Size = new System.Drawing.Size(121, 20);
+            this.numericUpDownFinalGrade.TabIndex = 0;
             // 
-            // subjLabel
+            // comboBoxStudent
             // 
-            this.subjLabel.AutoSize = true;
-            this.subjLabel.Location = new System.Drawing.Point(11, 57);
-            this.subjLabel.Name = "subjLabel";
-            this.subjLabel.Size = new System.Drawing.Size(43, 13);
-            this.subjLabel.TabIndex = 27;
-            this.subjLabel.Text = "Subject";
-            this.subjLabel.Click += new System.EventHandler(this.specLabel_Click);
+            this.comboBoxStudent.FormattingEnabled = true;
+            this.comboBoxStudent.Location = new System.Drawing.Point(49, 70);
+            this.comboBoxStudent.Name = "comboBoxStudent";
+            this.comboBoxStudent.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxStudent.TabIndex = 1;
             // 
-            // subjectBox
+            // comboBoxSubject
             // 
-            this.subjectBox.FormattingEnabled = true;
-            this.subjectBox.Location = new System.Drawing.Point(11, 76);
-            this.subjectBox.Name = "subjectBox";
-            this.subjectBox.Size = new System.Drawing.Size(121, 21);
-            this.subjectBox.TabIndex = 26;
+            this.comboBoxSubject.FormattingEnabled = true;
+            this.comboBoxSubject.Location = new System.Drawing.Point(49, 113);
+            this.comboBoxSubject.Name = "comboBoxSubject";
+            this.comboBoxSubject.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSubject.TabIndex = 2;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(14, 167);
+            this.buttonSave.Location = new System.Drawing.Point(49, 192);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 28;
+            this.buttonSave.Size = new System.Drawing.Size(121, 23);
+            this.buttonSave.TabIndex = 3;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Subject";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(47, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Final Grade";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Student";
             // 
             // FormGrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(357, 330);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.subjLabel);
-            this.Controls.Add(this.subjectBox);
-            this.Controls.Add(this.labelStu);
-            this.Controls.Add(this.studentBox);
-            this.Controls.Add(this.Student_ID_label);
+            this.Controls.Add(this.comboBoxSubject);
+            this.Controls.Add(this.comboBoxStudent);
             this.Controls.Add(this.numericUpDownFinalGrade);
             this.Name = "FormGrade";
             this.Text = "FormGrade";
-            this.Load += new System.EventHandler(this.FormGrade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFinalGrade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,12 +130,13 @@ namespace ISDA_Project_Framework
 
         #endregion
 
-        private System.Windows.Forms.Label labelStu;
-        private System.Windows.Forms.ComboBox studentBox;
-        private System.Windows.Forms.Label Student_ID_label;
         private System.Windows.Forms.NumericUpDown numericUpDownFinalGrade;
-        private System.Windows.Forms.Label subjLabel;
-        private System.Windows.Forms.ComboBox subjectBox;
+        private System.Windows.Forms.ComboBox comboBoxStudent;
+        private System.Windows.Forms.ComboBox comboBoxSubject;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

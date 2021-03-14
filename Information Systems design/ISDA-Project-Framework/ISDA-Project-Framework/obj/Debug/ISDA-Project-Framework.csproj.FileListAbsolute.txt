@@ -24,7 +24,6 @@ D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Fram
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.exe
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\bin\Debug\ISDA-Project-Framework.pdb
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.csprojAssemblyReference.cache
-D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormMain.resources
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormSpecialty.resources
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormSubject.resources
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.Properties.Resources.resources
@@ -33,4 +32,5 @@ D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Fram
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.exe
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA-Project-Framework.pdb
 D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormStudent.resources
-D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\ISDA_Project_Framework.FormGrade.resources
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\WindowsFormsAppISDA.FormGrade.resources
+D:\UNWE\UNWE\Information Systems design\ISDA-Project-Framework\ISDA-Project-Framework\obj\Debug\WindowsFormsAppISDA.FormMain.resources

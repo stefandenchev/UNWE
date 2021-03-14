@@ -1,9 +1,14 @@
-﻿using System;
+﻿using ISDA_Proj;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISDA_Proj
+namespace WindowsFormsAppISDA
 {
     public class Configurator
     {
@@ -17,12 +22,15 @@ namespace ISDA_Proj
         public void SaveSpecialty(int id, string name)
         {
             SqlConnection connection = this.manipulator.GetConnection();
+
             try
             {
                 connection.Open();
+
                 SqlCommand command = this.manipulator.GetCommand();
-                command.CommandText = @"INSERT INTO Specialty (SpecialtyId, Name)
-                                        VALUES (@SpecialtyId, @Name)";
+
+                command.CommandText =
+                    "INSERT INTO Specialty (SpecialtyId, Name) VALUES (@SpecialtyId, @Name)";
 
                 SqlParameter param = null;
 
@@ -36,10 +44,12 @@ namespace ISDA_Proj
 
                 command.ExecuteNonQuery();
             }
+
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
             }
+
             finally
             {
                 connection.Close();
@@ -53,19 +63,14 @@ namespace ISDA_Proj
             {
                 connection.Open();
                 SqlCommand command = this.manipulator.GetCommand();
-                command.CommandText = @"INSERT INTO Subject (SubjectId, Name)
-                                        VALUES (@SubjectId, @Name)";
-
+                command.CommandText = $"INSERT INTO Subject (SubjectId, Name) VALUES (@SubjectId, @Name)";
                 SqlParameter param = null;
-
                 param = new SqlParameter("@SubjectId", SqlDbType.Int);
                 param.Value = id;
                 command.Parameters.Add(param);
-
                 param = new SqlParameter("@Name", SqlDbType.VarChar);
                 param.Value = name;
                 command.Parameters.Add(param);
-
                 command.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -78,17 +83,15 @@ namespace ISDA_Proj
             }
         }
 
-        public void SaveStudent(int fNumber, int specialtyId, string fName, string mName,
-            string lName, string address, string phone, string eMail)
+        public void SaveStudent(int fNumber, int specialtyId, string fName, string mName, string lName, string address, string phone, string eMail)
         {
             SqlConnection connection = this.manipulator.GetConnection();
             try
             {
                 connection.Open();
                 SqlCommand command = this.manipulator.GetCommand();
-                command.CommandText = @"INSERT INTO Student (FNumber, SpecialtyId,
-                FName, MName, LName, Address, Phone, EMail) VALUES(@FNumber, @SpecialtyId,
-                @FName, @MName, @LName, @Address, @Phone, @EMail)";
+                command.CommandText = "INSERT INTO Student (FNumber, SpecialtyId, FName, MName, LName, Address, Phone, EMail)" +
+                    " VALUES(@FNumber, @SpecialtyId, @FName, @MName, @LName, @Address, @Phone, @EMail)";
                 SqlParameter param = null;
                 param = new SqlParameter("@FNumber", SqlDbType.Int);
                 param.Value = fNumber;
@@ -125,7 +128,6 @@ namespace ISDA_Proj
                 connection.Close();
             }
         }
-
         public DataTable LoadSpecialties()
         {
             DataTable result = new DataTable();
@@ -136,7 +138,7 @@ namespace ISDA_Proj
             {
                 connection.Open();
                 SqlCommand command = this.manipulator.GetCommand();
-                command.CommandText = @"SELECT SpecialtyId, Name FROM Specialty ORDER BY Name ASC";
+                command.CommandText = "SELECT SpecialtyId, Name FROM Specialty ORDER BY Name ASC";
                 SqlDataReader reader = command.ExecuteReader();
                 using (reader)
                 {
@@ -262,8 +264,5 @@ namespace ISDA_Proj
             }
             return result;
         }
-
-
-
     }
 }
