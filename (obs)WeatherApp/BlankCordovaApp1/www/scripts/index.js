@@ -5,9 +5,12 @@
 (function () {
     "use strict";
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
     function onDeviceReady() {
+        //getWeatherWithGeoLocation();
+
+
         $('#get-weather-btn').click(getWeatherWithCityName);
     };
 
@@ -18,4 +21,5 @@
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
-} )();
+
+})();

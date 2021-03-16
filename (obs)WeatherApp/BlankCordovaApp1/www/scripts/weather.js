@@ -10,6 +10,7 @@ function getWeatherWithCityName() {
     });
     return false;
 }
+
 function showWeatherData(results) {
     if (results.weather.length) {
         $('#error-msg').hide();
@@ -28,4 +29,24 @@ function showWeatherData(results) {
         $('#error-msg').show();
         $('#error-msg').text("Error retrieving data. ");
     }
+    $('#get-weather-btn').prop('disabled', false);
+}
+
+function getWeatherWithGeoLocation() {
+    navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError,
+        { enableHighAccuracy: true });
+    $('#error-msg').show();
+    $('#error-msg').text('Determining your current location ...');
+    $('#get-weather-btn').prop('disabled', true);
+}
+
+function onGetLocationSuccess(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+}
+
+function onGetLocationError(error) {
+    $('#error-msg').text('Error getting location');
+    $('#get-weather-btn').prop('disabled', false);
 }
