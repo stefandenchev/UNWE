@@ -16,6 +16,7 @@ namespace WindowsFormsAppISDA
         {
             InitializeComponent();
         }
+
         private void FormGrade_Load(object sender, EventArgs e)
         {
             Configurator configurator = new Configurator();
@@ -28,6 +29,7 @@ namespace WindowsFormsAppISDA
             this.comboBoxSubject.ValueMember = "id";
             this.comboBoxSubject.DisplayMember = "name";
         }
+
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Configurator configurator = new Configurator();

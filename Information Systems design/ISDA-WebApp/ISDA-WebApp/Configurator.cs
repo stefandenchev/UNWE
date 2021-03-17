@@ -45,5 +45,75 @@ namespace ISDA_WebApp
             }
             return result;
         }
+
+        public DataTable LoadSpecialties()
+        {
+            DataTable result = new DataTable();
+            result.Columns.Add("id");
+            result.Columns.Add("name");
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+            command.CommandText = "SELECT SpecialtyId, Name FROM Specialty ORDER BY Name ASC";
+            SqlDataReader reader = command.ExecuteReader();
+            using (reader)
+            {
+                while (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["SpecialtyId"]);
+                    string name = Convert.ToString(reader["Name"]);
+                    DataRow row = result.NewRow();
+                    row[0] = id;
+                    row[1] = name;
+                    result.Rows.Add(row);
+                }
+            }
+            connection.Close();
+            return result;
+        }
+
+        public Specialty LoadSpecialtyById(int id)
+        {
+            Specialty result = null;
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+            command.CommandText = "SELECT * FROM Specialty WHERE SpecialtyId = @SpecialtyId";
+            SqlParameter param = null;
+            param = new SqlParameter("@SpecialtyId", SqlDbType.Int);
+            param.Value = id;
+            command.Parameters.Add(param);
+            SqlDataReader reader = command.ExecuteReader();
+            using (reader)
+            {
+                if (reader.Read())
+                {
+                    result = new Specialty();
+
+                    string name = Convert.ToString(reader["Name"]);
+                    result.Id = id;
+                    result.Name = name;
+                }
+            }
+            connection.Close();
+            return result;
+        }
+
+        public void UpdateSpecialty(int id, string name)
+        {
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+            command.CommandText = "UPDATE Specialty SET Name = @Name WHERE SpecialtyId = @SpecialtyId";
+            SqlParameter param = null;
+            param = new SqlParameter("@SpecialtyId", SqlDbType.Int);
+            param.Value = id;
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Name", SqlDbType.VarChar);
+            param.Value = name;
+            command.Parameters.Add(param);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
     }
 }

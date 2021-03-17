@@ -122,6 +122,7 @@ namespace WindowsFormsAppISDA
             this.Controls.Add(this.numericUpDownFinalGrade);
             this.Name = "FormGrade";
             this.Text = "FormGrade";
+            this.Load += new System.EventHandler(this.FormGrade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFinalGrade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

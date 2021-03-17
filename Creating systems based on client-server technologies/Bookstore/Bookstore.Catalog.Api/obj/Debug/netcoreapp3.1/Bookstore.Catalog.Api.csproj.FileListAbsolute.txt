@@ -122,3 +122,13 @@ D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Book
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\obj\Debug\netcoreapp3.1\Bookstore.Catalog.Api.genruntimeconfig.cache
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\obj\Debug\netcoreapp3.1\Bookstore.Catalog.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Bookstore.Catalog.Api.xml
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\obj\Debug\netcoreapp3.1\Bookstore.Catalog.Api.xml
