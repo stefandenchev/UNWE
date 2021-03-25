@@ -83,7 +83,7 @@ namespace Bookstore.Catalog.Api.Controllers
         }
 
         [HttpPut("{bookId}")]
-        [Consumes("{application/json}")]
+        [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<BookResponse>> Put(int bookId, BookRequest bookRequest)
         {
@@ -130,7 +130,7 @@ namespace Bookstore.Catalog.Api.Controllers
         }
 
 
-        [HttpPost("{bookId}")]
+        [HttpDelete("{bookId}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> Delete(int bookId)
         {

@@ -54,7 +54,7 @@ namespace ISDA_WebApp
             SqlConnection connection = this.manipulator.GetConnection();
             connection.Open();
             SqlCommand command = this.manipulator.GetCommand();
-            command.CommandText = "SELECT SpecialtyId, Name FROM Specialty ORDER BY Name ASC";
+            command.CommandText = "SELECT SpecialtyId, Name FROM Specialty ORDER BY SpecialtyId ASC";
             SqlDataReader reader = command.ExecuteReader();
             using (reader)
             {
@@ -107,6 +107,76 @@ namespace ISDA_WebApp
             command.CommandText = "UPDATE Specialty SET Name = @Name WHERE SpecialtyId = @SpecialtyId";
             SqlParameter param = null;
             param = new SqlParameter("@SpecialtyId", SqlDbType.Int);
+            param.Value = id;
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Name", SqlDbType.VarChar);
+            param.Value = name;
+            command.Parameters.Add(param);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public DataTable LoadSubjects()
+        {
+            DataTable result = new DataTable();
+            result.Columns.Add("id");
+            result.Columns.Add("name");
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+            command.CommandText = "SELECT SubjectId, Name FROM Subject ORDER BY SubjectId";
+            SqlDataReader reader = command.ExecuteReader();
+            using (reader)
+            {
+                while (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["SubjectId"]);
+                    string name = Convert.ToString(reader["Name"]);
+                    DataRow row = result.NewRow();
+                    row[0] = id;
+                    row[1] = name;
+                    result.Rows.Add(row);
+                }
+            }
+            connection.Close();
+            return result;
+        }
+
+        public Subject LoadSubjectById(int id)
+        {
+            Subject result = null;
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+            command.CommandText = "SELECT * FROM Subject WHERE SubjectId = @SubjectId";
+            SqlParameter param = null;
+            param = new SqlParameter("@SubjectId", SqlDbType.Int);
+            param.Value = id;
+            command.Parameters.Add(param);
+            SqlDataReader reader = command.ExecuteReader();
+            using (reader)
+            {
+                if (reader.Read())
+                {
+                    result = new Subject();
+
+                    string name = Convert.ToString(reader["Name"]);
+                    result.Id = id;
+                    result.Name = name;
+                }
+            }
+            connection.Close();
+            return result;
+        }
+
+        public void UpdateSubject(int id, string name)
+        {
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+            command.CommandText = "UPDATE Subject SET Name = @Name WHERE SubjectId = @SubjectId";
+            SqlParameter param = null;
+            param = new SqlParameter("@SubjectId", SqlDbType.Int);
             param.Value = id;
             command.Parameters.Add(param);
             param = new SqlParameter("@Name", SqlDbType.VarChar);

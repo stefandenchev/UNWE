@@ -15,6 +15,7 @@ namespace Bookstore.Catalog.Api.Mapping
             CreateMap<Book, BookResponse>().ReverseMap();
             CreateMap<BookAuthor, BookAuthorResponse>().ReverseMap();
             CreateMap<BookGenre, BookGenreResponse>().ReverseMap();
+            CreateMap<BookRequest, Book>().ReverseMap();
         }
     }
 }
