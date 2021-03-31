@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "tj9v9uxHqxqY0fyLT+jwhZBlSY71hS/z+VldAT9S2NR08vhyWJUD1ixE66yCzVBh8sNk9GEDJfz5DFpbLujNaQ==",
+  "success": true,
+  "projectFilePath": "D:\\UNWE\\UNWE\\Creating systems based on client-server technologies\\Bookstore\\BookstoreConsoleApp\\BookstoreConsoleApp\\BookstoreConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AORUS\\.nuget\\packages\\microsoft.extensions.apidescription.client\\3.0.0\\microsoft.extensions.apidescription.client.3.0.0.nupkg.sha512",
+    "C:\\Users\\AORUS\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\AORUS\\.nuget\\packages\\nswag.apidescription.client\\13.0.5\\nswag.apidescription.client.13.0.5.nupkg.sha512",
+    "C:\\Users\\AORUS\\.nuget\\packages\\nswag.msbuild\\13.0.5\\nswag.msbuild.13.0.5.nupkg.sha512",
+    "C:\\Users\\AORUS\\.nuget\\packages\\system.text.json\\5.0.1\\system.text.json.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

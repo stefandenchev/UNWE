@@ -1,0 +1,13 @@
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\BookstoreConsoleApp.exe
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\BookstoreConsoleApp.deps.json
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\BookstoreConsoleApp.runtimeconfig.json
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\BookstoreConsoleApp.runtimeconfig.dev.json
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\BookstoreConsoleApp.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\BookstoreConsoleApp.pdb
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.csprojAssemblyReference.cache
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.AssemblyInfoInputs.cache
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.AssemblyInfo.cs
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.csproj.CoreCompileInputs.cache
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.pdb
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.genruntimeconfig.cache

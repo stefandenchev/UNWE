@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ISDA_WebApp.Models;
+using ISDA_WebApp_Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -185,5 +187,159 @@ namespace ISDA_WebApp
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+        public DataTable LoadStudents()
+        {
+            DataTable result = new DataTable();
+
+            result.Columns.Add("fNumber");
+            result.Columns.Add("specialtyName");
+            result.Columns.Add("fName");
+            result.Columns.Add("mName");
+            result.Columns.Add("lName");
+            result.Columns.Add("address");
+            result.Columns.Add("phone");
+            result.Columns.Add("eMail");
+
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+
+            command.CommandText = "SELECT * FROM Student " +
+                "JOIN Specialty ON Student.SpecialtyId = Specialty.SpecialtyId " +
+                "ORDER BY FNumber";
+
+            SqlDataReader reader = command.ExecuteReader();
+            using (reader)
+            {
+                while (reader.Read())
+                {
+                    string fNumber = Convert.ToString(reader["FNumber"]);
+                    string specialtyName = Convert.ToString(reader["Name"]);
+                    string fName = Convert.ToString(reader["FName"]);
+                    string mName = Convert.ToString(reader["MName"]);
+                    string lName = Convert.ToString(reader["LName"]);
+                    string address = Convert.ToString(reader["Address"]);
+                    string phone = Convert.ToString(reader["Phone"]);
+                    string eMail = Convert.ToString(reader["EMail"]);
+
+                    DataRow row = result.NewRow();
+
+                    row[0] = fNumber;
+                    row[1] = specialtyName;
+                    row[2] = fName;
+                    row[3] = mName;
+                    row[4] = lName;
+                    row[5] = address;
+                    row[6] = phone;
+                    row[7] = eMail;
+
+                    result.Rows.Add(row);
+                }
+            }
+            connection.Close();
+            return result;
+        }
+
+        public Student LoadStudentByFNumber(string fNumber)
+        {
+            Student result = null;
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+            command.CommandText = "SELECT * FROM Student WHERE FNumber = @FNumber";
+            SqlParameter param = null;
+
+            param = new SqlParameter("@FNumber", SqlDbType.VarChar);
+            param.Value = fNumber;
+            command.Parameters.Add(param);
+
+            SqlDataReader reader = command.ExecuteReader();
+            using (reader)
+            {
+                if (reader.Read())
+                {
+                    result = new Student();
+
+                    int specialtyId = Convert.ToInt32(reader["SpecialtyId"]);
+                    string fName = Convert.ToString(reader["FName"]);
+                    string mName = Convert.ToString(reader["MName"]);
+                    string lName = Convert.ToString(reader["LName"]);
+                    string address = Convert.ToString(reader["Address"]);
+                    string phone = Convert.ToString(reader["Phone"]);
+                    string eMail = Convert.ToString(reader["EMail"]);
+
+                    result.FNumber = fNumber;
+                    result.SpecialtyId = specialtyId;
+                    result.FName = fName;
+                    result.MName = mName;
+                    result.LName = lName;
+                    result.Address = address;
+                    result.Phone = phone;
+                    result.EMail = eMail;
+                }
+            }
+
+            connection.Close();
+            return result;
+        }
+
+        public void UpdateStudent(string fNumber, int specialtyId, string fName,
+            string mName, string lName, string address, string phone, string eMail)
+        {
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+
+            command.CommandText =
+                "UPDATE Student SET " +
+                "SpecialtyId = @SpecialtyId," +
+                "FName = @FName, " +
+                "MName = @MName, " +
+                "LName = @LName, " +
+                "Address = @Address, " +
+                "Phone = @Phone, " +
+                "EMail = @EMail " +
+                "WHERE FNumber = @FNumber";
+
+            SqlParameter param = null;
+
+            param = new SqlParameter("@FNumber", SqlDbType.VarChar);
+            param.Value = fNumber;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@SpecialtyId", SqlDbType.Int);
+            param.Value = specialtyId;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@FName", SqlDbType.VarChar);
+            param.Value = fName;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@MName", SqlDbType.VarChar);
+            param.Value = mName;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@LName", SqlDbType.VarChar);
+            param.Value = lName;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@Address", SqlDbType.VarChar);
+            param.Value = address;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@Phone", SqlDbType.VarChar);
+            param.Value = phone;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@EMail", SqlDbType.VarChar);
+            param.Value = eMail;
+            command.Parameters.Add(param);
+
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+
     }
 }

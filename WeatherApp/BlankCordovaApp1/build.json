@@ -1,0 +1,11 @@
+{
+  "android": {
+    "release": {
+      "keystore": "c:\\weatherKey.keystore",
+      "storePassword": "unwe123",
+      "alias": "s.denchev",
+      "password": "unwe123",
+      "keystoreType": ""
+    }
+  }
+}
