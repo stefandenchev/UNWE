@@ -8,9 +8,9 @@
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
     function onDeviceReady() {
-        //getWeatherWithGeoLocation();
-
         $('#get-weather-btn').click(getWeatherWithCityName);
+
+        getWeatherWithGeoLocation();
     }
 
     function onPause() {

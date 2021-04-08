@@ -1,20 +1,6 @@
-html {
-    height: 100%;
-}
-
-[role=main] {
-    background: rgba(0,0,0,.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
-}
-
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+* {
+    font-family: HelveticaNeue-Thin;
+    color: white;
 }
 
 .not-displayed {
@@ -22,34 +8,101 @@ body {
     color: white;
 }
 
+input, select, textarea {
+    color: #311a3b;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: center;
+    border-radius: 25px;
+    color: white
+}
+
+h5 {
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: center;
+    border-radius: 25px;
+    color: white
+}
+
+body {
+    background-image: linear-gradient( 90deg, #614385 0%, #516395 90%);
+}
+
+
 form {
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
-    color: green;
+    color: #141c1f;
 }
 
 #City-Name-input {
     font-size: 25px;
 }
 
-#get-weather-btn {
-    font-size: 22px;
+#city-name-input {
+    font-family: HelveticaNeue-Thin;
 }
+
+
+#get-weather-btn {
+    background-image: linear-gradient(to right, #614385 0%, #516395 51%, #614385 100%)
+}
+
+#get-weather-btn {
+    padding: 15px 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+}
+
+    #get-weather-btn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+    }
+         
+
+
+
 
 #title {
     font-size: 16px;
+    font-family: HelveticaNeue-Thin;
 }
 
 #summary {
     font-size: 35px;
+    font-family: HelveticaNeue-Thin;
 }
 
     #summary img {
         float: right;
+        border-radius: 25px;
     }
 
 #error-msg {
     text-align: center;
     margin-top: 50%;
     font-weight: bold;
+    font-family: HelveticaNeue-Thin
 }
+
+
+
+
+

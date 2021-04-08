@@ -11,3 +11,9 @@ D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Book
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.dll
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.pdb
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.genruntimeconfig.cache
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\Refit.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\BookstoreConsoleApp\BookstoreConsoleApp\obj\Debug\netcoreapp3.1\BookstoreConsoleApp.csproj.CopyComplete

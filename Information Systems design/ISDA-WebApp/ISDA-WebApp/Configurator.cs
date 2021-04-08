@@ -340,6 +340,128 @@ namespace ISDA_WebApp
             connection.Close();
         }
 
+        public DataTable LoadGrades()
+        {
+            DataTable result = new DataTable();
+
+            result.Columns.Add("fNumber");
+            result.Columns.Add("fName");
+            result.Columns.Add("mName");
+            result.Columns.Add("lName");
+            result.Columns.Add("subjectId");
+            result.Columns.Add("subjectName");
+            result.Columns.Add("finalGrade");
+
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+
+            command.CommandText = "SELECT FinalGrade, Student.*, Subject.* " +
+                "FROM StudentSubject " +
+                "JOIN Student ON StudentSubject.FNumber = Student.FNumber " +
+                "JOIN Subject ON StudentSubject.SubjectId = Subject.SubjectId " +
+                "ORDER BY FNumber, SubjectId";
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            using (reader)
+            {
+                while (reader.Read())
+                {
+                    string fNumber = Convert.ToString(reader["FNumber"]);
+                    string fName = Convert.ToString(reader["FName"]);
+                    string mName = Convert.ToString(reader["MName"]);
+                    string lName = Convert.ToString(reader["LName"]);
+                    int subjectId = Convert.ToInt32(reader["SubjectId"]);
+                    string subjectName = Convert.ToString(reader["Name"]);
+                    int finalGrade = Convert.ToInt32(reader["FinalGrade"]);
+
+                    DataRow row = result.NewRow();
+
+                    row[0] = fNumber;
+                    row[1] = fName;
+                    row[2] = mName;
+                    row[3] = lName;
+                    row[4] = subjectId;
+                    row[5] = subjectName;
+                    row[6] = finalGrade;
+
+                    result.Rows.Add(row);
+                }
+            }
+            connection.Close();
+            return result;
+        }
+
+        public Grade LoadGradeByFNumberAndSubjectId(string fNumber, int subjectId)
+        {
+            Grade result = null;
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+
+            command.CommandText = "SELECT * FROM StudentSubject " +
+                "WHERE FNumber = @FNumber " +
+                "AND SubjectId = @SubjectId";
+
+            SqlParameter param = null;
+
+            param = new SqlParameter("@FNumber", SqlDbType.VarChar);
+            param.Value = fNumber;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@SubjectId", SqlDbType.Int);
+            param.Value = subjectId;
+            command.Parameters.Add(param);
+
+            SqlDataReader reader = command.ExecuteReader();
+            using (reader)
+            {
+                if (reader.Read())
+                {
+                    result = new Grade();
+
+                    int finalGrade = Convert.ToInt32(reader["FinalGrade"]);
+
+                    result.FNumber = fNumber;
+                    result.SubjectId = subjectId;
+                    result.FinalGrade = finalGrade;
+                }
+            }
+
+            connection.Close();
+            return result;
+        }
+
+        public void UpdateGrade(string fNumber, int subjectId, int finalGrade)
+        {
+            SqlConnection connection = this.manipulator.GetConnection();
+            connection.Open();
+            SqlCommand command = this.manipulator.GetCommand();
+
+            command.CommandText =
+                "UPDATE StudentSubject " +
+                "SET FinalGrade = @FinalGrade " +
+                "WHERE FNumber = @FNumber AND SubjectId = @SubjectId";
+
+            SqlParameter param = null;
+
+            param = new SqlParameter("@FNumber", SqlDbType.VarChar);
+            param.Value = fNumber;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@SubjectId", SqlDbType.Int);
+            param.Value = subjectId;
+            command.Parameters.Add(param);
+
+            param = new SqlParameter("@FinalGrade", SqlDbType.Int);
+            param.Value = finalGrade;
+            command.Parameters.Add(param);
+
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
 
     }
 }

@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-        <asp:GridView ID="GridViewContent" runat="server"
+    <asp:GridView ID="GridViewContent" runat="server"
         OnRowCommand="GridViewContent_RowCommand" AutoGenerateColumns="False">
         <Columns>
             <asp:ButtonField ButtonType="Link"

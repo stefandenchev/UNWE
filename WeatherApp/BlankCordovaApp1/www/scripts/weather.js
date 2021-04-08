@@ -33,25 +33,27 @@ function showWeatherData(results) {
 }
 
 function getWeatherWithGeoLocation() {
+    //Метод getCurrentPosition вика Cordova Geolocation API
     navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError,
         { enableHighAccuracy: true });
     $('#error-msg').show();
     $('#error-msg').text('Determining your current location ...');
     $('#get-weather-btn').prop('disabled', true);
 }
-
 function onGetLocationSuccess(position) {
+    //Изтегляне на информация за локацията на устройството от обекта position
+    $('#get-weather-btn').prop('disabled', true);
+
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
 
-    var queryString =
-        'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=' + OpenWeatherAppKey;
+    var queryString = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude
+        + '&appid=' + OpenWeatherAppKey + '&units=metric';
     $.getJSON(queryString, function (results) {
         showWeatherData(results);
     }).fail(function (jqXHR) {
         $('#error-msg').show();
         $('#error-msg').text("Error retrieving data. " + jqXHR.statusText);
-
     });
     return false;
 }

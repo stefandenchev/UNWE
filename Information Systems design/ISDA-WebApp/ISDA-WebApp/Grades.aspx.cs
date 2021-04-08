@@ -11,7 +11,39 @@ namespace ISDA_WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (this.Session["username"] == null)
+            {
+                this.Response.Redirect("Default.aspx");
+            }
 
+            this.LoadData();
+        }
+
+        protected void GridViewContent_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Select")
+            {
+                // Convert the row index stored in the CommandArgument
+                // property to an Integer.
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                // Get the last name of the selected author from the appropriate
+                // cell in the GridView control.
+                GridViewRow selectedRow = this.GridViewContent.Rows[index];
+                TableCell firstCell = selectedRow.Cells[1];
+                TableCell fifthCell = selectedRow.Cells[5];
+                string fnumber = firstCell.Text;
+                string subjectId = fifthCell.Text;
+                this.Response.Redirect("GradeInfo.aspx?fnumber=" + fnumber
+                    + "&subjectid=" + subjectId);
+            }
+        }
+
+        private void LoadData()
+        {
+            Configurator configurator = new Configurator();
+            this.GridViewContent.DataSource = configurator.LoadGrades();
+            this.GridViewContent.DataBind();
         }
     }
 }

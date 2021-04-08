@@ -1,4 +1,4 @@
-﻿using BooksApi;
+﻿using Refit;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -22,15 +22,33 @@ namespace BookstoreConsoleApp
                     Console.WriteLine(book.Title);
                 }
 
-                var api = new Bookstore("https://localhost:44303", client);
+                /*var api = new Bookstore("https://localhost:44303", client);
                 var books = await api.GetAllAsync();
 
                 foreach (var book in books)
                 {
                     Console.WriteLine(book.Title);
+                }*/
+
+                var refitApi = RestService.For<IBookstoreApi>("https://localhost:44303/api/books");
+                var refitBooks = await refitApi.GetAllBooks();
+
+                foreach (var book in refitBooks)
+                {
+                    Console.WriteLine(book.Title);
                 }
+
             }
         }
+    }
+
+    public interface IBookstoreApi
+    {
+        [Get("/api/books")]
+        Task<List<Book>> GetAllBooks();
+
+        [Get("/api/books/{id}")]
+        Task<List<Book>> GetById(int id);
     }
 
     public class Book
