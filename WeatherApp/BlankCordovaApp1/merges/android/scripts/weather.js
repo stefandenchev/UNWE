@@ -19,7 +19,8 @@ function getWeatherWithCityName() {
 
 function showWeatherData(results) {
 
-    $('#app-title').text("Android платформа");
+    //$('#app-title').text("Android платформа");
+    $('#app-title').text("Времето");
 
     if (results.weather.length) {
         $('#error-msg').hide();

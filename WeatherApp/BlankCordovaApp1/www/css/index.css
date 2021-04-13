@@ -1,5 +1,5 @@
 * {
-    font-family: HelveticaNeue-Thin;
+    font-family: 'Play', sans-serif;
     color: white;
 }
 
@@ -49,11 +49,16 @@ form {
 }
 
 #city-name-input {
-    font-family: HelveticaNeue-Thin;
+    font-family: 'Play', sans-serif;
+}
+
+li#title {
+    font-family: 'Play', sans-serif;
 }
 
 
 #get-weather-btn {
+    font-family: 'Play', sans-serif;
     background-image: linear-gradient(to right, #614385 0%, #516395 51%, #614385 100%)
 }
 
@@ -76,9 +81,6 @@ form {
         text-decoration: none;
     }
          
-
-
-
 
 #title {
     font-size: 16px;
