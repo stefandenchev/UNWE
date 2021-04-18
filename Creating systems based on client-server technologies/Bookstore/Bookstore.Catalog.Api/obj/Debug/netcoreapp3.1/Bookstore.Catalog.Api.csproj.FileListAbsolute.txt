@@ -132,3 +132,5 @@ D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Book
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Bookstore.Catalog.Api.xml
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\obj\Debug\netcoreapp3.1\Bookstore.Catalog.Api.xml
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Bookstore.Dto.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Catalog.Api\bin\Debug\netcoreapp3.1\Bookstore.Dto.pdb

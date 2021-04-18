@@ -1,0 +1,9 @@
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\bin\Debug\netcoreapp3.1\Bookstore.Dto.deps.json
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\bin\Debug\netcoreapp3.1\Bookstore.Dto.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\bin\Debug\netcoreapp3.1\Bookstore.Dto.pdb
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\obj\Debug\netcoreapp3.1\Bookstore.Dto.csprojAssemblyReference.cache
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\obj\Debug\netcoreapp3.1\Bookstore.Dto.AssemblyInfoInputs.cache
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\obj\Debug\netcoreapp3.1\Bookstore.Dto.AssemblyInfo.cs
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\obj\Debug\netcoreapp3.1\Bookstore.Dto.csproj.CoreCompileInputs.cache
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\obj\Debug\netcoreapp3.1\Bookstore.Dto.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore\Bookstore.Dto\obj\Debug\netcoreapp3.1\Bookstore.Dto.pdb

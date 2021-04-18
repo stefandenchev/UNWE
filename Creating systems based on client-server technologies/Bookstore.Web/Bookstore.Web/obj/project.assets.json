@@ -269,6 +269,16 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Bookstore.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Bookstore.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bookstore.Dto.dll": {}
+        }
       }
     }
   },
@@ -648,10 +658,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Bookstore.Dto/1.0.0": {
+      "type": "project",
+      "path": "../../Bookstore/Bookstore.Dto/Bookstore.Dto.csproj",
+      "msbuildProject": "../../Bookstore/Bookstore.Dto/Bookstore.Dto.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Bookstore.Dto >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.13"
     ]
   },
@@ -681,7 +697,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\UNWE\\UNWE\\Creating systems based on client-server technologies\\Bookstore\\Bookstore.Dto\\Bookstore.Dto.csproj": {
+              "projectPath": "D:\\UNWE\\UNWE\\Creating systems based on client-server technologies\\Bookstore\\Bookstore.Dto\\Bookstore.Dto.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -717,7 +737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

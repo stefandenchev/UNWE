@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bookstore.Catalog.Api.Dto.Books;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -22,24 +23,64 @@ namespace Bookstore.Web.Services
             booksResponse.EnsureSuccessStatusCode();
 
             var stream = await booksResponse.Content.ReadAsStreamAsync();
-            var books = await JsonSerializer.DeserializeAsync<List<BookResponse>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true});
+            var books = await JsonSerializer.DeserializeAsync<List<BookResponse>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
             return books;
         }
-    }
 
-    public class BookResponse
-    {
-        public int BookID { get; set; }
-        public string ISBN { get; set; }
-        public string Title { get; set; }
-        public int Year { get; set; }
-        public int PublisherID { get; set; }
-        public int LanguageID { get; set; }
-        public decimal Price { get; set; }
+        public async Task<List<AuthorResponse>> GetAllAuthors()
+        {
+            var authorsResponse = await Client.GetAsync("authors");
+            authorsResponse.EnsureSuccessStatusCode();
 
-        public string LanguageName { get; set; }
-        public string PublisherCompanyName { get; set; }
+            var stream = await authorsResponse.Content.ReadAsStreamAsync();
+            var authors = await JsonSerializer.DeserializeAsync<List<AuthorResponse>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
+            return authors;
+        }
+
+        public async Task<List<GenreResponse>> GetAllGenres()
+        {
+            var genresResponse = await Client.GetAsync("genres");
+            genresResponse.EnsureSuccessStatusCode();
+
+            var stream = await genresResponse.Content.ReadAsStreamAsync();
+            var genres = await JsonSerializer.DeserializeAsync<List<GenreResponse>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+            return genres;
+        }
+
+        public async Task<BookResponse> GetBook(int bookId)
+        {
+            var bookResponse = await Client.GetAsync($"books/{bookId}");
+            bookResponse.EnsureSuccessStatusCode();
+
+            var stream = await bookResponse.Content.ReadAsStreamAsync();
+            var book = await JsonSerializer.DeserializeAsync<BookResponse>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+            return book;
+        }
+
+        public async Task<AuthorResponse> GetAuthor(int authorId)
+        {
+            var authorResponse = await Client.GetAsync($"authors/{authorId}");
+            authorResponse.EnsureSuccessStatusCode();
+
+            var stream = await authorResponse.Content.ReadAsStreamAsync();
+            var author = await JsonSerializer.DeserializeAsync<AuthorResponse>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+            return author;
+        }
+
+        public async Task<GenreResponse> GetGenre(int genreId)
+        {
+            var genreResponse = await Client.GetAsync($"genres/{genreId}");
+            genreResponse.EnsureSuccessStatusCode();
+
+            var stream = await genreResponse.Content.ReadAsStreamAsync();
+            var genre = await JsonSerializer.DeserializeAsync<GenreResponse>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+            return genre;
+        }
     }
 }

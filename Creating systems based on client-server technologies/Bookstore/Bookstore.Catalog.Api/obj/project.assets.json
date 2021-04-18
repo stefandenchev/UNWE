@@ -1516,6 +1516,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Bookstore.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Bookstore.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bookstore.Dto.dll": {}
+        }
       }
     }
   },
@@ -5668,12 +5678,18 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Bookstore.Dto/1.0.0": {
+      "type": "project",
+      "path": "../Bookstore.Dto/Bookstore.Dto.csproj",
+      "msbuildProject": "../Bookstore.Dto/Bookstore.Dto.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "Bookstore.Dto >= 1.0.0",
       "Microsoft.AspNetCore.JsonPatch >= 3.1.12",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.12",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.12",
@@ -5708,7 +5724,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\UNWE\\UNWE\\Creating systems based on client-server technologies\\Bookstore\\Bookstore.Dto\\Bookstore.Dto.csproj": {
+              "projectPath": "D:\\UNWE\\UNWE\\Creating systems based on client-server technologies\\Bookstore\\Bookstore.Dto\\Bookstore.Dto.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5776,7 +5796,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
