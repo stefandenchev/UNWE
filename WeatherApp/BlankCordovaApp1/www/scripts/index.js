@@ -7,12 +7,10 @@
 
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
-    function onDeviceReady() {
-        //$('#get-weather-btn').click(getWeatherData);
+    function onDeviceReady() {   
         $('#get-weather-btn').click(getWeatherWithCityName);
-        //$('#get-weather-btn').click(get5DayWeatherWithCityName);
 
-        getWeatherWithGeoLocation();
+        //getWeatherWithGeoLocation();
     }
 
     function onPause() {

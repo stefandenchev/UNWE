@@ -5,11 +5,12 @@
        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
        -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://api.openweathermap.org 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://api.openweathermap.org 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
@@ -22,7 +23,6 @@
     <div data-role="page" id="weather-page">
         <div data-role="header" class="header">
             <h1 id="app-title">Времето</h1>
-            <!-- <a href="/" class="ui-btn ui-btn-left ui-btn-corner-all uiicon-home ui-btn-icon-notext" rel="external">Home</a>-->
         </div>
         <div role="main" class="ui-content">
             <form>
@@ -32,25 +32,17 @@
                     Покажи времето
                 </button>
             </form>
+            <div id="test"></div>
             <ul id="weather-data" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow not-displayed">
                 <li data-role="list-divider" id="title" class="ui-li-divider ui-bar-a"></li>
-                <li>
-                    <span id="summary">
-                        <span id="temperature"></span> C <img src="" />
-                    </span>
-                </li>
-                <li>Вятър: <span id="wind"></span> възела</li>
-                <li>Влажност: <span id="humidity"></span> %</li>
-                <li>Видимост: <span id="visibility"></span></li>
-                <li>Изгрев: <span id="sunrise"></span></li>
-                <li>Залез: <span id="sunset"></span></li>
             </ul>
             <div id="error-msg" class="not-displayed">
             </div>
         </div>
         <footer data-role="footer" data-position="fixed">
             <h5>
-                Модели за изграждане на мобилни приложения.
+                Модели за изграждане на мобилни приложения
+                Стефан Денчев 17114092
             </h5>
         </footer>
     </div>

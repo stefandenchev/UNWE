@@ -80,7 +80,7 @@ li#title {
         color: #fff;
         text-decoration: none;
     }
-         
+
 
 #title {
     font-size: 16px;
@@ -104,7 +104,23 @@ li#title {
     font-family: HelveticaNeue-Thin
 }
 
+#weather-data li {
+    padding: 5px;
+}
 
+.weather-card {
+    border: 2px solid #3a1e45;
+    border-radius: 10px;
+    margin: 2em 0;
+    padding: 2em;
+    float: none;
+}
 
+    .weather-card div:nth-child(1) {
+        display: inline;
+    }
 
-
+    .weather-card div:nth-child(2) {
+        display: inline;
+        float: right;
+    }

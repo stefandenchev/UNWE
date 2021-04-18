@@ -1,42 +1,42 @@
-﻿var OpenWeatherAppKey = "2c24436d9d9a44bc6d9eae99d7835bb9"; //5bb30b963a0d79993b96acd6ce552b0c
+﻿const OpenWeatherAppKey = "2c24436d9d9a44bc6d9eae99d7835bb9";
 
 function getWeatherWithCityName() {
-
     var cityName = $('#city-name-input').val();
-
-    var queryString = 'http://api.openweathermap.org/data/2.5/weather?q='
-        + cityName + '&appid=' + OpenWeatherAppKey + '&units=metric';
-
+    var queryString = 'http://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=' + OpenWeatherAppKey + '&units=metric';
     $.getJSON(queryString, function (results) {
         showWeatherData(results);
-
     }).fail(function (jqXHR) {
         $('#error-msg').show();
         $('#error-msg').text("Error retrieving data. " + jqXHR.statusText);
     });
     return false;
+
+}
+
+function appendWeatherDataToList(temp, windSpeed, humidity, dateTime, visibility, icon) {
+    let tempDiv = `<div><span id="summary"><span id="temperature">${temp}</span> C <img src="" /></span></div>`;
+    let windDiv = `<div>Вятър: <span id="wind">${windSpeed}</span> възела</div>`;
+    let dateTimeDiv = `<div>Дата и час: ${dateTime}</div>`;
+    let humidityDiv = `<div>Влажност: <span id="humidity">${humidity}</span> %</div>`;
+    let visibilityDiv = `<div>Видимост: <span id="visibility">${visibility}</span></div>`;
+
+    let iconUrl = "http://openweathermap.org/img/w/" + icon + ".png";
+    let iconDiv = `<div><img src='${iconUrl}'></img></div>`;
+
+    let parentContainer = `<li class="weather-card">${tempDiv}${iconDiv}${windDiv}${humidityDiv}${dateTimeDiv}${visibilityDiv}</li>`;
+
+    $("#weather-data").append(parentContainer); 
 }
 
 function showWeatherData(results) {
-
-    //$('#app-title').text("Android платформа");
-    $('#app-title').text("Времето");
-
-    if (results.weather.length) {
+    if (results.list.length) {
+      
         $('#error-msg').hide();
+        $('#title').text(results.city.name);
         $('#weather-data').show();
 
-        $('#title').text(results.name);
-        $('#temperature').text(results.main.temp);
-        $('#wind').text(results.wind.speed);
-        $('#humidity').text(results.main.humidity);
-        $('#visibility').text(results.weather[0].main);
-
-        var sunriseDate = new Date(results.sys.sunrise * 1000);
-        $('#sunrise').text(sunriseDate.toLocaleTimeString());
-
-        var sunsetDate = new Date(results.sys.sunset * 1000);
-        $('#sunset').text(sunsetDate.toLocaleTimeString());
+        results.list.forEach(result => appendWeatherDataToList(result.main.temp, result.wind.speed, result.main.humidity, result.dt_txt,
+            result.visibility, result.weather[0].icon));
 
     } else {
         $('#weather-data').hide();
