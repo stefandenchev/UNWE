@@ -10,10 +10,15 @@ namespace Bookstore.Web.Controllers
     public class BooksController : Controller
     {
         private BookCatalogService _bookCatalog;
+        private OpenLibraryService _openLibrary;
+        private EcontService _econtService;
 
-        public BooksController(BookCatalogService bookCatalog)
+        public BooksController(BookCatalogService bookCatalog, OpenLibraryService openLibrary,
+            EcontService econtService)
         {
             _bookCatalog = bookCatalog;
+            _openLibrary = openLibrary;
+            _econtService = econtService;
         }
         public async Task<IActionResult> Index()
         {
@@ -36,7 +41,21 @@ namespace Bookstore.Web.Controllers
         public async Task<IActionResult> Book(int id)
         {
             var book = await _bookCatalog.GetBook(id);
+
+            var openLibraryBook = await _openLibrary.GetBookByISBN(book.ISBN);
+            ViewBag.OpenLibraryBook = openLibraryBook;
+
             return View(book);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> BookPurchase(int id)
+        {
+            var book = await _bookCatalog.GetBook(id);
+
+            var econtResponse = await _econtService.CreateLabel();
+
+            return View("BookPurchased", econtResponse);
         }
     }
 }

@@ -1,0 +1,5 @@
+﻿@model Bookstore.Web.Econt.LabelResponse
+
+    <p>Price of delivery: @Model.Label.TotalPrice лева</p> 
+    <p>Exprected delivery date: @(DateTimeOffset.FromUnixTimeMilliseconds
+        (Model.Label.ExpectedDeliveryDate.Value).DateTime.ToLongDateString())</p> 

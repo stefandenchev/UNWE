@@ -355,3 +355,5 @@ D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore.Web\
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore.Web\Bookstore.Web\obj\Debug\netcoreapp3.1\Razor\Views\Books\Authors.cshtml.g.cs
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore.Web\Bookstore.Web\obj\Debug\netcoreapp3.1\Razor\Views\Books\Author.cshtml.g.cs
 D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore.Web\Bookstore.Web\obj\Debug\netcoreapp3.1\Razor\Views\Books\Book.cshtml.g.cs
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore.Web\Bookstore.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\UNWE\UNWE\Creating systems based on client-server technologies\Bookstore.Web\Bookstore.Web\obj\Debug\netcoreapp3.1\Razor\Views\Books\BookPurchased.cshtml.g.cs

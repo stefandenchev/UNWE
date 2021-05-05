@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LR7Xn4kbzlInEEN7B+F09CVwFjasVIjZ6s2zil64+6cYfZ9WatdiS6YCGzxfii93sbami+5ly5i0HYEp4NZEKw==",
+  "dgSpecHash": "A+N9JAKbGbOlr/1liCxWXO0O6pkFJMvtK2J+DqrdXoWx2KzryiQ5O2DFtXHO0Hx7Sny+HUKhniae3f5tm6zlGA==",
   "success": true,
   "projectFilePath": "D:\\UNWE\\UNWE\\Creating systems based on client-server technologies\\Bookstore.Web\\Bookstore.Web\\Bookstore.Web.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\AORUS\\.nuget\\packages\\microsoft.codeanalysis.razor\\3.1.13\\microsoft.codeanalysis.razor.3.1.13.nupkg.sha512",
     "C:\\Users\\AORUS\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.1.6\\microsoft.extensions.dependencymodel.3.1.6.nupkg.sha512",
     "C:\\Users\\AORUS\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\AORUS\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\AORUS\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
     "C:\\Users\\AORUS\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\AORUS\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
